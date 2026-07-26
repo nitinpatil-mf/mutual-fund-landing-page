@@ -1294,8 +1294,14 @@
         <div class="bg-white rounded-2xl p-8 md:p-12 text-gray-800">
 
 
-            <form class="grid md:grid-cols-2 gap-6">
+            <form 
+            class="grid md:grid-cols-2 gap-6"
+            onsubmit="sendToWhatsApp(event)"
+            >
 
+
+
+                <!-- Name -->
 
                 <div>
 
@@ -1303,14 +1309,22 @@
                         Name
                     </label>
 
+
                     <input 
+                    id="name"
+                    name="name"
                     type="text"
                     placeholder="Your Name"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3">
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3"
+                    required>
 
                 </div>
 
 
+
+
+
+                <!-- Mobile -->
 
                 <div>
 
@@ -1318,14 +1332,22 @@
                         Mobile Number
                     </label>
 
+
                     <input 
+                    id="mobile"
+                    name="mobile"
                     type="tel"
                     placeholder="Your Mobile Number"
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3">
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3"
+                    required>
 
                 </div>
 
 
+
+
+
+                <!-- Email -->
 
                 <div>
 
@@ -1333,7 +1355,10 @@
                         Email
                     </label>
 
+
                     <input 
+                    id="email"
+                    name="email"
                     type="email"
                     placeholder="Your Email Address"
                     class="w-full border border-gray-300 rounded-lg px-4 py-3">
@@ -1343,6 +1368,9 @@
 
 
 
+
+                <!-- Investor Category -->
+
                 <div>
 
                     <label class="block mb-2 font-semibold">
@@ -1350,19 +1378,42 @@
                     </label>
 
 
-                    <select class="w-full border border-gray-300 rounded-lg px-4 py-3">
+                    <select 
+                    id="category"
+                    name="category"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3"
+                    required>
 
-                        <option>Select Category</option>
 
-                        <option>Business Owner</option>
+                        <option value="">
+                            Select Category
+                        </option>
 
-                        <option>Doctor / Professional</option>
 
-                        <option>Salaried Executive</option>
+                        <option value="Business Owner">
+                            Business Owner
+                        </option>
 
-                        <option>Family Investor</option>
 
-                        <option>HNI Investor</option>
+                        <option value="Doctor / Professional">
+                            Doctor / Professional
+                        </option>
+
+
+                        <option value="Salaried Executive">
+                            Salaried Executive
+                        </option>
+
+
+                        <option value="Family Investor">
+                            Family Investor
+                        </option>
+
+
+                        <option value="HNI Investor">
+                            HNI Investor
+                        </option>
+
 
                     </select>
 
@@ -1371,19 +1422,26 @@
 
 
 
+
+
+                <!-- Submit Button -->
+
                 <div class="md:col-span-2 text-center mt-4">
 
 
                     <button 
                     type="submit"
-                    class="bg-[#C9A227] text-black font-bold px-10 py-4 rounded-lg">
+                    class="bg-[#C9A227] text-black font-bold px-10 py-4 rounded-lg hover:bg-yellow-400 transition">
+
 
                         Book Free Wealth Consultation
+
 
                     </button>
 
 
                 </div>
+
 
 
             </form>
